@@ -1,0 +1,154 @@
+/* Custom Properties */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --ff-primary: 'Blinker',  sans-serif;
+    --ff-secondary: 'Source Sans Pro', sans-serif;
+    
+    --fw-reg: 400;
+    --fw-bold: 700;
+    
+    --clr-light: #fff;
+    --clr-dark: #111D4A;
+    --clr-accent: #05CBE9;
+    
+    --fs-h2: 1.75rem;
+    --fs-btn: 1.25rem;
+    --fs-body: 1rem;
+    
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h2: 2.25rem;
+        --fs-btn: 1.25rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* General styles */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-light);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-reg);
+    line-height: 1.6;
+    
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+    flex-basis: 200px;
+    min-height: 0;
+    min-width: 0;
+    
+}
+
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: .35em 1em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    font-size: var(--fs-btn);
+    font-weight: var(--fw-bold);
+    letter-spacing: 1px;
+    transition: transform 200ms ease-in-out;
+} 
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--clr-light);
+    transform: scale(1.1);
+} 
+
+/* Typography */
+h2,
+p{
+    margin: 0;
+}
+h2 {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+    color: var(--clr-accent);
+    line-height: 1;
+}
+.card-body{
+    font-family: var(--ff-secondary);
+    margin-top: 1rem;
+}
+.card-info span{
+    font-weight: var(--fw-bold);
+    display: block;
+    font-size: var(--fs-btn);
+}
+.card-info{
+    opacity: .6;
+    line-height: 1;
+}
+
+/* Layout */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+.card-content{
+    background-color: var(--clr-dark);
+    padding: 1em;
+    
+}
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+    align-items: flex-end;
+}
+
+@media (min-width: 800px) {
+    .container{
+        flex-direction: row;
+    }
+    .card-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-footer{
+        margin-top: auto;
+    }
+    .card-body{
+        max-width: 500px;
+    }
+    img{
+        height: 300px;
+    }
+    
+}
+
+
+
+
